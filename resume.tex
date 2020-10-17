@@ -1,0 +1,289 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+%https://time.com/3648812/verbs-resume-awesome/
+\documentclass[11pt,letterpaper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.84]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{hyperref}
+\usepackage{import}
+
+% personal data
+\name{Muhammad Rizwan}{Khalid}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{Bukhari Colony, \ Multan}{Punjab}{Pakistan}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\textheight = 230mm
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-22mm}
+\begin{center}
+\begin{tabular}{c c c c}
+\faPhone\enspace +92 (335) 608-1155 & 
+\faEnvelopeO\enspace{mkhalid.bscs16seecs@seecs.edu.pk} & 
+%https://github.com/mrizwank97
+\faGithub\enspace \href{https://github.com/mrizwank97}{mrizwank97} &
+%https://www.linkedin.com/in/mrizwank97/
+\faLinkedinSquare\enspace \href{https://www.linkedin.com/in/mrizwank97/}{mrizwank97} 
+\end{tabular}
+\end{center}
+\vspace*{-4mm}
+
+\section{EDUCATION}
+{\customcventry{2016 - 2020}{Bachelor of Science (BS), \textbf{Computer Science}, Honors}{NATIONAL UNIVERSITY OF SCIENCES AND TECHNOLOGY (NUST)}{Islamabad, PK}{}{}
+{\begin{itemize}
+  \item CGPA: \textbf{3.94/4.00}, Dean's List (Top 3\% of the batch)
+ \end{itemize}
+}
+}
+
+\section{EXPERIENCE}
+
+%{\customcventry{Sep~2020 - Present}{Afiniti Software Solution}{Production Analyst}{Lahore, PK}{}
+%{\begin{itemize}
+ % \item Proactive monitoring of afiniti's deployment to ensure uninterrupted service 
+%   \item Management of an incident during its entire life cycle
+%   \item Restoration of services as quickly as possible
+%\end{itemize}
+%}}
+
+{\customcventry{July~2020 -  Sep~2020}{Part-Time at Ingenio EC}{Jr. Data Scientist}{Islamabad, PK}{}
+{\begin{itemize}
+    \item Developed text pre-processing pipeline for spanish text
+    \item Trained SVM, MLP, Logistic Regression \& Naive Bayes for sentiment analysis 
+    \item Developed AWS comprehend API pipeline for spanish text sentiment analysis 
+    \item Trained YOLO v3 \& v4 for fortnite players detection 
+\end{itemize}
+}}
+
+{\customcventry{July~2020 -  Aug~2020}{Koc University Summer Research Program}{Research Intern}{Remote Internship}{}
+{\begin{itemize}
+    \item Project: Process alarm prediction using deep learning \& word Embedding methods
+    \item Learned Distributed Machine Learning with Pytorch
+    \item Skip Gram model trained using Negative Sampling for vectorizing alarm sequences
+    \item Trained LSTM model for predicting the next alarm occurrence
+\end{itemize}
+}}
+
+{\customcventry{Jun~2018 - May~2020}{TUKL-NUST R \& D Center}{Research Assistant}{Islamabad, PK}{}
+{\begin{itemize}
+    \item{Completed multiple online courses for Machine Learning \& Deep Learning}
+    \item{Collaborated with senior students working on their final year projects}
+    \item{Shortlisted \& interviewed inters for Summer'19 internship program}
+    \item{Supervised lab interns with their learning \& projects}
+    %\item{}
+\end{itemize}
+}}
+
+{\customcventry{Jun~2019 - Aug~2019}{Embedded System Lab, University of Kaiserslautern}{Research Assistant}{Kaiserslautern, DE}{}
+{\begin{itemize}
+    \item{Explored EuroSAT and BigEarthNet archives}
+    \item{Trained Deep CNNs for Multilabel Classification}
+    \item{Explored SEN12MS archive having images from 3 different satellite sources}
+    \item{Trained Deep CNNs on fused multi-source data for multilabel classification}
+\end{itemize}
+}}
+
+
+%{\customcventry{Jun~2018 - Aug~2018}{System Analysis and Verification (SAVe) Lab}{Development Intern}{Islamabad, PK}{}
+%{\begin{itemize}
+%  \item{Project: Automatic WhiteBox Testing Tool}
+%    \cvlistitem{Collaboration with National Engineering \& Scientific %Commission Pakistan}
+%    \item{Enhancing the scope of the project to all data types}
+%    \item{Learning Qt C++ for GUI development}
+%    \item{Developing GUI of the existing CLI based tool}
+%\end{itemize}
+%}}
+
+
+\section{PROJECTS}
+
+\cvlistitem{{\textbf{Forest Cover Change Detection Using Remote Sensing Data}} \textit{'Bachelor Thesis'}
+{\begin{enumerate}
+    \item{Collected 248,000 Synthetic aperture radar images for the area covered under BigEarthNet Dataset}
+    \item{Trained VGG-16 model on  fused SAR \& Optical images for multi label classification}
+    \item{Achieved \textbf{2\% accuracy improvement} on fused data}
+    \item{Made Web Application using React and Django} %\url{http://thetacab.com/}}
+\end{enumerate}
+}}
+
+
+\cvlistitem{{\textbf{Skin Lesion Segmentation and Classification}} %\textit{'Semester Project'}
+{\begin{enumerate}
+    \item{Tested multiple segmentation models like UNet, DSNet, Tiramisu DenseNet on ISIC 2018 dataset}
+    \item{Tested multiple loss functions like Cross Entropy, Dice, Tanimoto \& Tversky loss functions}
+    \item{Incorporated attention unit of UNet model in Tiramisu DenseNet}
+    \item{Achieved \textbf{2\% improvement} in IoU metric over DenseNet model}
+    \item {GitHub repo: \url{https://github.com/mrizwank97/Skin-Lesion}}
+\end{enumerate}
+}}
+
+%\cvlistitem{{\textbf{NUST Classified}} \textit{'Semester Project'}
+%{\begin{enumerate}
+%    \item{A website portal where students can sell \& buy products among themselves}
+%    \item{Made Front-end of the Website using HTM5, CSS3 and Bootstrap}
+%    \item{Used PHP at the back-end for session management, image resizing and database management}
+%    \item{GitHub repo: \url{https://github.com/mrizwank97/NUST-Classified}}
+%\end{enumerate}
+%}}
+
+\cvlistitem{{\textbf{Lip Reading (Visual Speech Classification)}} \textit{'Semester Project'}
+{\begin{enumerate}
+    \item{Explored GRID Video Dataset}
+    \item{Extracted frames and segmented the mouth region}
+    \item{Used 3D convolutions for learning spatial \& temporal features}
+    \item{Reproduced the results of lip reading paper by Oxford University}
+    %\item{GitHub repo: \url{https://github.com/mrizwank97/NUST-Classified}}
+\end{enumerate}
+}}
+
+%\cvlistitem{{\textbf{Lip Reading (Visual Speech Classification)}} \textit{'Semester Project'}}%{\newline Semester Project for the course AI. We basically used the GRID video data for visual speech classification. The main aim of the project was to reproduce the result of Lip-Reading paper by university of Oxford. In this project we extracted the frames from the video and segmented the mouth using openCV and then used the 3d convolution architecture for learning the spatial and temporal features from the frames and then predicted the transcript of the speech.}}
+
+%\cvlistitem{%\href{https://github.com/syedabbashussainnaqvi/SAUFR-}
+%{\textbf{Smart Attendance Using Facial Recognition }} \textit{'SAUFR'}}
+%}
+%\cvlistitem{\href{https://github.com/nustian16/Search_Engine}{\textbf{NUST Classified}}}% \textit{'Prototype for NUST'}{\newline It was our semester project for \textit{Web Engineering} course. We basically made the prototype for online purchase and sale of goods among the NUSTians. We developed both the Back-End and the Front-End of the system. For frontend we applied the UXI principles to make website look attractive and appealing while providing the strong Back-end in order to facilitate the users.}}
+
+%\cvlistitem{%\href{https://github.com/nustian16/DownloadManager}
+%{\textbf{HTTP File Downloader}} \textit{'Command Line Interface (CLI) Tool'}{}}
+
+%\cvlistitem{%\href{https://github.com/nustian16/Search_Engine}
+%{\textbf{Mini-Search Engine }} \textit{'Page-Rank Algorithm'}{}}
+
+\section{TEACHING ASSISTANTSHIPS}
+\begin{minipage}{\maincolumnwidth}
+\small{
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item SE-200 Software Engineering \textit{Fall'19} 
+      \item CS-251 Data Structures \& Algorithms \textit{Fall'18}
+      \item EE-353 Computer Networks \textit{Spring'19}
+      \item CS-344 Web Engineering \textit{Spring'18}
+    \end{itemize}
+  \end{multicols}}
+\end{minipage}
+\vspace*{-4mm}
+
+\section{ONLINE COURSES}
+\begin{minipage}{\maincolumnwidth}
+\small{
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item Deep Learning Specialization, \textit{Coursera} 
+      \item Machine Learning for Coders,\textit{ fast.ai}
+      \item NLP Specialization,\textit{ Coursera}
+      \item Practical Deep Learning for Coders,\textit{ fast.ai}
+    \end{itemize}
+  \end{multicols}}
+\end{minipage}
+\vspace*{-4mm}
+
+\section{KEY SKILLS}
+{\bfseries Languages:} Python, Java, C/C++ \\
+{\bfseries Database:} MySQL, PostgreSQL, MongoDB \\
+{\bfseries Additional Tools:} AWS, Git, GitHub \\
+%{\bfseries Java Frameworks:} JDBC, Hibernate, Spring boot \\
+{\bfseries Web Tools:} HTML5, CSS3, JavaScript, Flask, PHP \\
+{\bfseries Python Packages:} PyTorch, Keras, TensorFlow, Sklearn, Pandas
+
+\section{AWARDS AND ACHIEVEMENTS}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+    	\item Fully funded Research Internship offered by DAAD \& University of Kaiserslautern
+    	\item Travel Award for KAIST EECamp, South Korea 
+    	\item NUST Merit Scholarship for 7 semesters %(\url{http://www.nust.edu.pk/Admissions/Scholarships/Pages/FINANCIAL-ASSISTANCESHIP-FOR-UNDERGRADUATE-STUDENTS.aspx})
+		\end{itemize}}%
+\end{minipage}%
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
